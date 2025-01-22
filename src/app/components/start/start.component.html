@@ -1,0 +1,24 @@
+<div fxLayout="column" class="start-screen" fxFlexFill>
+  @defer {
+    <div fxFlex="0 1 auto" fxFlexAlign="center">
+      <h2>Sudoku</h2>
+    </div>
+    <div fxFlex fxLayoutAlign="center center" class="main-selection">
+      <mat-card>
+
+        <mat-card-content fxLayout="column" fxLayoutGap="10px">
+          @for (item of level;track item){
+            <button mat-raised-button>{{ item }}</button>
+          }
+        </mat-card-content>
+
+      </mat-card>
+    </div>
+
+  } @loading (minimum 1ms) {
+    <div class="spinner">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  }
+
+</div>
