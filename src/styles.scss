@@ -1,7 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 app-imprint {
-  .imprint {
-    text-align: center;
+  display: flex;
+  justify-content: center;
+
+  .imprint-init {
+    p {
+      margin: 8px 0;
+    }
+  }
+}
+
+app-root , app-start{
+  display: block;
+  height: 100%;
+}
+
+app-start {
+  .spinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .start-screen {
+    padding: 5px;
+  }
+
+  .main-selection > mat-card {
+    width: 70%;
   }
 }
